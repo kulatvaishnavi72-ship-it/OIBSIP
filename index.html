@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TempSwift — Temperature Converter</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="card">
+    <header class="card__header">
+      <div class="logo">
+        <span class="logo__icon">🌡️</span>
+        <span class="logo__text">TempSwift</span>
+      </div>
+      <p class="tagline">Convert Celsius, Fahrenheit &amp; Kelvin instantly</p>
+    </header>
+
+    <section class="converter">
+      <label for="temp-input" class="field-label">Enter a temperature value</label>
+      <input
+        type="text"
+        id="temp-input"
+        class="temp-input"
+        placeholder="e.g. 25"
+        inputmode="decimal"
+        autocomplete="off"
+      >
+      <p id="input-error" class="error-msg" role="alert"></p>
+
+      <label for="unit-select" class="field-label">From unit</label>
+      <div class="unit-select-wrap">
+        <select id="unit-select" class="unit-select">
+          <option value="C" selected>Celsius (°C)</option>
+          <option value="F">Fahrenheit (°F)</option>
+          <option value="K">Kelvin (K)</option>
+        </select>
+      </div>
+
+      <button id="convert-btn" class="convert-btn" type="button">Convert</button>
+
+      <div class="results" id="results" aria-live="polite">
+        <div class="result-row" id="row-C">
+          <span class="result-unit">Celsius</span>
+          <span class="result-value" id="out-C">—</span>
+        </div>
+        <div class="result-row" id="row-F">
+          <span class="result-unit">Fahrenheit</span>
+          <span class="result-value" id="out-F">—</span>
+        </div>
+        <div class="result-row" id="row-K">
+          <span class="result-unit">Kelvin</span>
+          <span class="result-value" id="out-K">—</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="card__footer">
+      <p>Absolute zero: −273.15 °C · −459.67 °F · 0 K</p>
+    </footer>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
